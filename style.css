@@ -1,0 +1,313 @@
+@charset "UTF-8";
+/*
+Theme Name: Memo
+Author: Sivuyile Christopher Shasha
+Author URI: https://github.com/scshasha/
+Description: Course scheduling website WordPress theme.
+Requires at least: 4.9.6
+Requires PHP: 5.6
+Version: 1.0
+Text Domain: memo
+Tags: one-column, flexible-header, custom-menu, custom-logo, featured-images, footer-widgets, threaded-comments, translation-ready, sidebar, sidebar-menu
+
+This theme, like WordPress, is licensed under the GPL.
+
+Memo is based on Underscores https://underscores.me/, (C) 2012-2019 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+
+/**
+--------------------------
+General
+---------------------------
+*/
+html, body {
+    font-family: 'Raleway', sans-serif, Tahoma;
+    color: #11142d;
+}
+
+.h1, h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.h2, h2 {
+    font-size: 1rem;
+}
+
+.h1 a, h1 a, .h2 a, h2 a, .h3 a, h3 a, .h4 a, h4 a, .h5 a, h5 a, .h6 a, h6 a {
+    color: #11142d;
+    transition: all .3s ease-out;
+}
+
+.h1 a:hover, h1 a:hover, .h2 a:hover, h2 a:hover, .h3 a:hover, h3 a:hover, .h4 a:hover, h4 a:hover, .h5 a:hover, h5 a:hover, .h6 a:hover, h6 a:hover {
+    color: #11142d;
+    opacity: .6;
+}
+
+/* 
+ul li, ol li {
+    list-style-type: none;
+} 
+*/
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 3.777em;
+}
+
+.muted, .title.muted {
+    color: #efeff3;    
+}
+
+/**
+--------------------------
+Nav/Sidebar & Branding
+---------------------------
+*/
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+    .navbar-brand {
+        z-index: 999;
+    }
+}
+
+@media (min-width: 767.98px) {
+    nav#sidebarMenu {
+        padding-top: 11.3333%;
+    }
+
+    .nav-link i.fa {
+        margin-right: 1.2em;
+        margin-left: -2em;
+    }
+
+    ul.nav.flex-column li {
+        padding-left: 3em;
+    }
+}
+
+#navigation {
+    height: 6.333rem;
+}
+
+.navbar-brand {
+    box-shadow: none;
+    text-transform: lowercase;
+    font-weight: 600;
+    font-size: 1.333em;
+    color: inherit;
+}
+
+.navbar-brand .logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.sidebar {
+    box-shadow: none;
+}
+
+.navbar-brand, .sidebar {
+    background-color: #f7f8fb;
+}
+
+.nav-item .nav-link, .pager li a {
+    color: #878996;
+    font-weight: 400;
+}
+
+.nav-item.current-menu-item {
+    list-style-type: circle;
+}
+
+.nav-item.active .nav-link, .nav-item.current-menu-item .nav-link {
+    color: #111424;
+    font-weight: 600;
+}
+
+/**
+--------------------------
+Main
+---------------------------
+*/
+main.col-md-9.ml-sm-auto.col-lg-10.px-md-4 {
+    margin-top: -4rem;
+}
+
+/**
+--------------------------
+Course Template
+---------------------------
+*/
+.course-status span {
+    font-weight: 600;
+    opacity: .6;
+}
+
+.course-status span a {
+    color: #111424;
+}
+
+.course-status span.active {
+    opacity: 1;
+}
+
+/**
+--------------------------
+Search Form
+---------------------------
+*/
+input.form-control-sm {
+    border-radius: 0px;
+    border: 1px solid #e7e7e7;
+    /* border-left: 0px; */
+    color: #ababaf;
+    transition: all 0.5s ease-out;
+}
+
+input.form-control-sm:focus {
+    outline: none;
+}
+
+button.btn.btn-default.btn-sm {
+    transition: all 0.5s ease-out;
+    border-radius: 0px;
+    border: 1px solid #e7e7e7;
+    border-right: 0px;
+    color: #ababaf;
+}
+
+input.form-control-sm:focus,
+button.btn.btn-default.btn-sm:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button.btn.btn-default.btn-sm:focus,
+button.btn.btn-default.btn-sm:active {
+    background-color: #11142d;
+}
+.error-404>.search-form>input[type="search"] {
+    width: 94% !important;
+}
+
+.error-404>.col-md-6.page-content.text-center {
+    margin: 2em auto;
+}
+
+/**
+--------------------------
+Pagination
+---------------------------
+*/
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+.pagination>li>a, .pagination>li>span {
+	color: inherit;
+	border-color: #dcdcdc;
+	-webkit-transition: border-color, 0.3s;
+	transition: border-color, 0.3s
+}
+.pagination>li>span {
+	cursor: default
+}
+.pagination>li>span:hover {
+	background-color: #fff
+}
+.pagination>li:first-child>a, .pagination>li:first-child span {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0
+}
+.pagination>li:last-child>a, .pagination>li:last-child span {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+	background-color: #111424;
+	border-color: #111424
+}
+
+.pager li>a:active, .pagination>li a:active {
+	box-shadow: inset 0 3px 1px rgba(0,0,0,0.2)
+}
+.pager li>a:hover, .pager li>a:focus, .pagination>li a:hover, .pagination>li a:focus {
+	background-color: #fff;
+	border-color: #111424;
+	color: #111424;
+	box-shadow: inset 0 0 1px #111424;
+	z-index: 2;
+	-webkit-transition: border-color, 0.3s;
+	transition: border-color, 0.3s
+}
+.pager li>a, .pager li>span {
+	border-radius: 0;
+	border-color: #dcdcdc
+}
+.pager.pager-rounded li>a, .pager.pager-rounded li>span {
+	border-radius: 15px
+}
+.pager .disabled>a, 
+.pager .disabled>span, 
+.pager .disabled>a:hover, 
+.pager .disabled>span:hover, 
+.pager .disabled>a:focus, 
+.pager .disabled>span:focus, 
+.pagination .disabled>a, 
+.pagination .disabled>span, 
+.pagination .disabled>a:hover, 
+.pagination .disabled>span:hover, 
+.pagination .disabled>a:focus, 
+.pagination .disabled>span:focus {
+	opacity: .7;
+	border-color: #dcdcdc;
+	box-shadow: none
+}
+.pager li>a, .pager li>span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+.pager.pl-0 {
+    margin-left: -5rem;
+}
+.pager li {
+    display: inline;
+}
+.pager li>a, .pager li>span {
+    border-radius: 0;
+    border-color: #dcdcdc;
+}
+.pager li>a {
+    min-width: 1.5em;
+    width: 10em;
+    margin: 0 5px;
+}
+.pager .disabled>a, .pager .disabled>a:focus, .pager .disabled>a:hover, .pager .disabled>span {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+}
+a:hover {
+    text-decoration: none !important;
+    color: inherit;
+}
